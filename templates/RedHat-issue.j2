@@ -1,0 +1,10 @@
+{% if not file.content | length %}
+\S
+Kernel \r on an \m
+{% else %}
+{{ file.content }}
+{% endif %}
+{% if file.name == 'issue' %}
+{# add empty line in /etc/issue #}
+
+{% endif %}

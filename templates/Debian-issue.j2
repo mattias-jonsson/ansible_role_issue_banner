@@ -1,0 +1,9 @@
+{% if not file.content | length %}
+{{ file.distribution }} {{ file.version }} \n \l
+{% else %}
+{{ file.content }}
+{% endif %}
+{% if file.name == 'issue' %}
+{# add empty line in /etc/issue #}
+
+{% endif %}

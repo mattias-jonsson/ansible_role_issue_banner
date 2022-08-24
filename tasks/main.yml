@@ -1,0 +1,6 @@
+---
+
+- name: run tasks on supported operating systems
+  block:
+    - import_tasks: configure.yml
+  when: ansible_os_family == "Debian" or ansible_os_family == "RedHat" 
