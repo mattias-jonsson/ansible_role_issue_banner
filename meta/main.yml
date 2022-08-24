@@ -1,5 +1,10 @@
 ---
 galaxy_info:
+  author: Mattias Jonsson
+  description: Modifies /etc/issue and /etc/issue.net on supported distributions.
+  min_ansible_version: 2.9.27
+  role_name: ansible_role_motd
+  license: MIT
   platforms:
   - name: EL
     versions:
@@ -11,9 +16,9 @@ galaxy_info:
     - "34"
   - name: Debian
     versions:
-    - "10"
-    - "11"
+    - "bullseye"
   - name: Ubuntu
     versions:
-    - "18"
-    - "20"
+    - "bionic"
+    - "focal"
+    - "jammy"
