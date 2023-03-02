@@ -6,19 +6,19 @@ galaxy_info:
   role_name: ansible_role_motd
   license: MIT
   platforms:
-  - name: EL
-    versions:
-    - "7"
-    - "8"
-  - name: Fedora
-    versions:
-    - "32"
-    - "34"
-  - name: Debian
-    versions:
-    - "bullseye"
-  - name: Ubuntu
-    versions:
-    - "bionic"
-    - "focal"
-    - "jammy"
+    - name: EL
+      versions:
+        - "7"
+        - "8"
+    - name: Fedora
+      versions:
+        - "32"
+        - "34"
+    - name: Debian
+      versions:
+        - "bullseye"
+    - name: Ubuntu
+      versions:
+        - "bionic"
+        - "focal"
+        - "jammy"

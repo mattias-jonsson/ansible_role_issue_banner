@@ -1,20 +1,20 @@
 ---
 
-- name: set linux version fact on Debian based distros
-  set_fact:
+- name: Set linux version fact on Debian based distros.
+  ansible.builtin.set_fact:
     ansible_role_motd_linux_version: "{{ ansible_lsb.description | regex_replace('^.* ([\\d\\.\\-]+).*?$', '\\1') }}"
     ansible_role_motd_linux_distribution: "{{ ansible_lsb.description | regex_replace('^([\\w\\/\\s]+) [0-9]..*?$', '\\1') }}"
   changed_when: false
   when: ansible_os_family == "Debian"
 
-- name: install /etc/issue and /etc/issue.net
+- name: Install /etc/issue and /etc/issue.net.
   become: true
   ansible.builtin.template:
     src: "{{ ansible_os_family }}-issue.j2"
     dest: '/etc/{{ file.name }}'
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
     backup: '{{ ansible_role_motd_backup }}'
   loop:
     - name: 'issue'
@@ -27,4 +27,3 @@
       distribution: '{{ ansible_role_motd_linux_distribution | default([]) }}'
   loop_control:
     loop_var: file
-
