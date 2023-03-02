@@ -4,9 +4,9 @@ Ansible Role: ansible_role_motd
 Modifies /etc/issue and /etc/issue.net on the following Linux distributions:
 
 <ul>
-<li>CentOS 7  
-<li>Debian 11  
-<li>Ubuntu 20.04  
+<li>CentOS 7
+<li>Debian 11
+<li>Ubuntu 20.04
 </ul>
 
 
@@ -20,17 +20,11 @@ Role Variables
 
 Available variables are listed below, along with default values where applicable (see `defaults/main.yml`):
 
-    ansible_role_motd_issue_msg:
-
-Text to be added to /etc/issue, if variable is empty the file reverts to OS default.  
-
-    ansible_role_motd_issue_net_msg:
-
-Text to be added to /etc/issue.net, if variable is empty the file reverts to OS default.  
-
-    ansible_role_motd_backup: yes
-
-Should a backup be created, acceptable values, yes or no.
+| Variable | Required | Default | Comments |
+| -------- | -------- | ------- | -------- |
+| `ansible_role_motd_issue_msg` | No | | Text to be added to /etc/issue, if variable is empty the file reverts to OS default. |
+| `ansible_role_motd_issue_net_msg` | No | | Text to be added to /etc/issue.net, if variable is empty the file reverts to OS default. |
+| `ansible_role_motd_backup` | No | true | Boolean, should a backup be created? |
 
 
 Dependencies
