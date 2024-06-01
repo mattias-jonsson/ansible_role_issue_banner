@@ -1,5 +1,5 @@
 ---
 
-ansible_role_motd_issue_msg: ''
-ansible_role_motd_issue_net_msg: ''
-ansible_role_motd_backup: 'true'
+issue_banner_backup: 'true'
+issue_banner_msg: ''
+issue_banner_net_msg: ''

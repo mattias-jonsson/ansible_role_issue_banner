@@ -1,0 +1,26 @@
+---
+argument_specs:
+  main:
+    short_description: "Modifies /etc/issue and /etc/issue.net with specified messages on supported Linux distributions."
+    options:
+      issue_banner_msg:
+        description: >
+          The message to be added to `/etc/issue`.
+          If this variable is left empty, the file will revert to the operating system's default message.
+        required: false
+        type: str
+        default: ""
+      issue_banner_net_msg:
+        description: >
+          The message to be added to `/etc/issue.net`.
+          If this variable is left empty, the file will revert to the operating system's default message.
+        required: false
+        type: str
+        default: ""
+      issue_banner_backup:
+        description: >
+          A boolean that determines whether a backup of the original files should be created
+          before making changes. Set to `true` by default.
+        required: false
+        type: bool
+        default: true

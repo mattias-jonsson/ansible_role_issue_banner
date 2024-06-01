@@ -1,6 +1,6 @@
 ---
 
 - name: Import configure tasks.
-  ansible.builtin.import_tasks:
+  ansible.builtin.include_tasks:
     file: configure.yml
   when: ansible_os_family == "Debian" or ansible_os_family == "RedHat"
